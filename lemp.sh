@@ -24,4 +24,8 @@ sudo echo '<?php phpinfo(); ?>' > index.php
 sudo systemctl restart nginx
 
 #install mysql
+sudo apt install -y mysql-server
+sudo mysql 
+echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'tinhdoan';"
 
+# sudo apt install -y phpmyadmin
