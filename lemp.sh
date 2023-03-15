@@ -28,6 +28,7 @@ sudo systemctl restart nginx
 sudo apt install -y mysql-server
 sudo apt install -y expect
 
+#set password for mysql
 expect -c "
 spawn sudo mysql
 
@@ -37,12 +38,5 @@ send \"ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 't
 expect \">\"
 send \"exit\n\"
 "
-
-# mysql_secure_installation
-# tinhdoan
-# 0
-# y
-# y
-# y
-
-# sudo apt install -y phpmyadmin
+#install phpmyadmin 
+sudo apt install -y phpmyadmin
