@@ -39,4 +39,12 @@ expect \">\"
 send \"exit\n\"
 "
 #install phpmyadmin 
-sudo apt install -y phpmyadmin
+cd /usr/share
+sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-english.tar.gz
+sudo tar -zxvf phpMyAdmin-5.2.1-english.tar.gz
+
+sudo mv /usr/share/phpMyAdmin-5.2.1-english /usr/share/phpmyadmin
+sudo rm phpMyAdmin-5.2.1-english.tar.gz
+
+cd phpmyadmin
+sudo cp config.sample.inc.php config.inc.php
